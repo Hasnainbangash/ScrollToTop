@@ -15,6 +15,7 @@ struct ContentView: View {
     func listItem(_ num: Int) -> some View {
         Text("This is item \(num)")
             .padding(50)
+            .id(num)
     }
     
     // MARK: - BODY
