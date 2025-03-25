@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - PROPERTIES
     
+    @State var visibleItems: Set<Int> = Set()
+    
     // MARK: - FUNCTION
     
     func listItem(_ num: Int) -> some View {
