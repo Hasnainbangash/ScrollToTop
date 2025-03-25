@@ -22,7 +22,7 @@ struct ContentView: View {
     
     var body: some View {
         ScrollViewReader { proxy in
-            ZStack {
+            ZStack(alignment: .bottomTrailing) {
                 List {
                     listItem(1)
                     listItem(2)
@@ -44,6 +44,7 @@ struct ContentView: View {
                         .background(.black.opacity(0.5))
                         .foregroundColor(.white)
                 }
+                .padding(5)
                 
             } //: ZSTACK
         } //: SCROLL VIEW READER
