@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - FUNCTION
+    
+    func listItem(_ num: Int) -> some View {
+        Text("This is item\(num)")
+            .padding(10)
+    }
+    
+    // MARK: - BODY
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        List {
+            
+        } //: LIST
     }
 }
+
+// MARK: - PREVIEW
 
 #Preview {
     ContentView()
