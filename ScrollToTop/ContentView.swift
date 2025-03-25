@@ -44,16 +44,21 @@ struct ContentView: View {
                     listItem(10)
                 } //: LIST
                 
-                Button {
-                    // This will scroll to the id that is giving to it
-                    proxy.scrollTo(1)
-                } label: {
-                    Image(systemName: "chevron.up")
-                        .padding(30)
-                        .background(.black.opacity(0.5))
-                        .foregroundColor(.white)
+                let selectedID = 1
+                
+                // Here only show the scroll to top button when the visibleItems set won't contain the selected id
+                if !visibleItems.contains(selectedID) {
+                    Button {
+                        // This will scroll to the id that is giving to it
+                        proxy.scrollTo(1)
+                    } label: {
+                        Image(systemName: "chevron.up")
+                            .padding(30)
+                            .background(.black.opacity(0.5))
+                            .foregroundColor(.white)
+                    } //: BUTTON
+                    .padding(5)
                 }
-                .padding(5)
                 
             } //: ZSTACK
         } //: SCROLL VIEW READER
