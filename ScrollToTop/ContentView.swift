@@ -37,7 +37,8 @@ struct ContentView: View {
                 } //: LIST
                 
                 Button {
-                    
+                    // This will scroll to the id that is giving to it
+                    proxy.scrollTo(1)
                 } label: {
                     Image(systemName: "chevron.up")
                         .padding(30)
