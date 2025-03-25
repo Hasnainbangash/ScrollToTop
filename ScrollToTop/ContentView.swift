@@ -33,6 +33,16 @@ struct ContentView: View {
                 listItem(9)
                 listItem(10)
             } //: LIST
+            
+            Button {
+                
+            } label: {
+                Image(systemName: "chevron.up")
+                    .padding(30)
+                    .background(.black.opacity(0.5))
+                    .foregroundColor(.white)
+            }
+
         } //: ZSTACK
     }
 }
