@@ -20,30 +20,32 @@ struct ContentView: View {
     // MARK: - BODY
     
     var body: some View {
-        ZStack {
-            List {
-                listItem(1)
-                listItem(2)
-                listItem(3)
-                listItem(4)
-                listItem(5)
-                listItem(6)
-                listItem(7)
-                listItem(8)
-                listItem(9)
-                listItem(10)
-            } //: LIST
-            
-            Button {
+        ScrollViewReader { proxy in
+            ZStack {
+                List {
+                    listItem(1)
+                    listItem(2)
+                    listItem(3)
+                    listItem(4)
+                    listItem(5)
+                    listItem(6)
+                    listItem(7)
+                    listItem(8)
+                    listItem(9)
+                    listItem(10)
+                } //: LIST
                 
-            } label: {
-                Image(systemName: "chevron.up")
-                    .padding(30)
-                    .background(.black.opacity(0.5))
-                    .foregroundColor(.white)
-            }
-
-        } //: ZSTACK
+                Button {
+                    
+                } label: {
+                    Image(systemName: "chevron.up")
+                        .padding(30)
+                        .background(.black.opacity(0.5))
+                        .foregroundColor(.white)
+                }
+                
+            } //: ZSTACK
+        } //: SCROLL VIEW READER
     }
 }
 
