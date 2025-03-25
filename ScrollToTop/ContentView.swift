@@ -18,6 +18,12 @@ struct ContentView: View {
         Text("This is item \(num)")
             .padding(50)
             .id(num)
+            .onAppear {
+                visibleItems.insert(num)
+            }
+            .onDisappear {
+                visibleItems.remove(num)
+            }
     }
     
     // MARK: - BODY
