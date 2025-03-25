@@ -49,8 +49,10 @@ struct ContentView: View {
                 // Here only show the scroll to top button when the visibleItems set won't contain the selected id
                 if !visibleItems.contains(selectedID) {
                     Button {
-                        // This will scroll to the id that is giving to it
-                        proxy.scrollTo(1)
+                        withAnimation {
+                            // This will scroll to the id that is giving to it
+                            proxy.scrollTo(selectedID)
+                        }
                     } label: {
                         Image(systemName: "chevron.up")
                             .padding(30)
