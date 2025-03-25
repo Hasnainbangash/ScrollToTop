@@ -31,18 +31,39 @@ struct ContentView: View {
     var body: some View {
         ScrollViewReader { proxy in
             ZStack(alignment: .bottomTrailing) {
-                List {
-                    listItem(1)
-                    listItem(2)
-                    listItem(3)
-                    listItem(4)
-                    listItem(5)
-                    listItem(6)
-                    listItem(7)
-                    listItem(8)
-                    listItem(9)
-                    listItem(10)
-                } //: LIST
+                /*
+                 
+                 // By Using the list the onAppear and onDisappear funcyion well
+                 List {
+                     listItem(1)
+                     listItem(2)
+                     listItem(3)
+                     listItem(4)
+                     listItem(5)
+                     listItem(6)
+                     listItem(7)
+                     listItem(8)
+                     listItem(9)
+                     listItem(10)
+                 } //: LIST
+                 
+                 */
+                
+                // By Using the vstack the onAppear works well but the onDisappear wont work because the view loads all at t]one time in the vstack so we have to use the lazyvstack to it works like the list and the buttons only shos in the emulator
+                ScrollView {
+                    LazyVStack {
+                        listItem(1)
+                        listItem(2)
+                        listItem(3)
+                        listItem(4)
+                        listItem(5)
+                        listItem(6)
+                        listItem(7)
+                        listItem(8)
+                        listItem(9)
+                        listItem(10)
+                    } //: LAZYVSTACK
+                } //: SCROLL VIEW
                 
                 let selectedID = 1
                 
